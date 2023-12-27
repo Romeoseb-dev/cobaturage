@@ -4,15 +4,15 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 
-import App from "./App";
 import Fishs from "./pages/Fishs";
 import OneFish from "./pages/OneFish";
 import AdminFishs from "./pages/Admin/AdminFishs";
 import Administration from "./pages/Admin/Administration";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
-    element: <App />,
+    element: <Home />,
     children: [
       {
         path: "/",

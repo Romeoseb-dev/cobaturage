@@ -22,7 +22,19 @@ const read = async (req, res, next) => {
     next(err);
   }
 };
+
+const add = async (req, res, next) => {
+  const fish = req.body;
+
+  try {
+    const insertId = await tables.fish.create(fish);
+    res.status(201).json({ insertId });
+  } catch (err) {
+    next(err);
+  }
+};
 module.exports = {
   browse,
   read,
+  add,
 };

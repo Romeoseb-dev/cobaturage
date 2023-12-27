@@ -23,6 +23,7 @@ router.get("/methods/:id", methodControllers.read);
 
 // Route to add a new item
 router.post("/items", itemControllers.add);
+router.post("/fishs", fishControllers.add);
 
 /* ************************************************************************* */
 
