@@ -1,4 +1,6 @@
+import { FaPhoneAlt } from "react-icons/fa";
 import insta from "../assets/insta.svg";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -11,6 +13,7 @@ function Navbar() {
         <li>GALERIE</li>
       </ul>
       <ul className="list-contact">
+        <FaPhoneAlt className="phone" />
         <li>06.25.16.81.28</li>
         <li>
           <img src={insta} alt="insta" />
