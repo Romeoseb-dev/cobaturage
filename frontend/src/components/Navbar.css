@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+.navbar-burger {
+  display: none;
+}
 .navbar {
   background-color: rgb(24, 10, 87);
   margin: 0;
@@ -30,4 +33,15 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.number-phone {
+  margin-left: 0.5rem;
+}
+@media (max-width: 800px) {
+  .list-navbar {
+    display: none;
+  }
+  .navbar-burger {
+    display: flex;
+  }
 }
