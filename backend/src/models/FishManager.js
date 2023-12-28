@@ -2,13 +2,13 @@ const AbstractManager = require("./AbstractManager");
 
 class FishManager extends AbstractManager {
   constructor() {
-    super({ table: "fishs" });
+    super({ table: "fish" });
   }
 
   async create(fish) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (title) values (?)`,
-      [fish.title]
+      `insert into ${this.table} (name,weight,picture,year,methods_id) values (?,?,?,?,?)`,
+      [fish.name, fish.weight, fish.picture, fish.year, fish.methods_id]
     );
 
     return result.insertId;
@@ -16,10 +16,10 @@ class FishManager extends AbstractManager {
 
   async read(id) {
     const [rows] = await this.database.query(
-      `SELECT fishs.*, methods.method
-       FROM fishs
-       INNER JOIN methods ON fishs.methods_id = methods.id
-       WHERE fishs.id = ?`,
+      `SELECT fish.*, methods.method
+       FROM fish
+       INNER JOIN methods ON fish.methods_id = methods.id
+       WHERE fish.id = ?`,
       [id]
     );
 

@@ -2,8 +2,8 @@ const tables = require("../tables");
 
 const browse = async (req, res, next) => {
   try {
-    const fishs = await tables.fishs.readAll();
-    res.json(fishs);
+    const fish = await tables.fish.readAll();
+    res.json(fish);
   } catch (err) {
     next(err);
   }
@@ -11,7 +11,7 @@ const browse = async (req, res, next) => {
 
 const read = async (req, res, next) => {
   try {
-    const fish = await tables.fishs.read(req.params.id);
+    const fish = await tables.fish.read(req.params.id);
 
     if (fish == null) {
       res.sendStatus(404);
