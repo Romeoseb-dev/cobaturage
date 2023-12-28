@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import "./NavbarBurger.css"; // Assurez-vous d'avoir un fichier de style associé
+import "./NavbarBurger.css";
 
 function NavbarBurger() {
   const [isOpen, setIsOpen] = useState(false);

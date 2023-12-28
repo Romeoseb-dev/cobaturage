@@ -1,10 +1,15 @@
+import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import insta from "../assets/insta.svg";
-
 import "./Navbar.css";
 import NavbarBurger from "./NavbarBurger";
 
 function Navbar() {
+  const handlePhoneClick = () => {
+    const phoneNumber = "06.25.16.81.28";
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   return (
     <div className="navbar">
       <ul className="navbar-burger">
@@ -17,8 +22,14 @@ function Navbar() {
         <li>GALERIE</li>
       </ul>
       <ul className="list-contact">
-        <FaPhoneAlt className="phone" />
-        <li className="number-phone">06.25.16.81.28</li>
+        <a
+          className="number-phone"
+          href="tel:06.25.16.81.28"
+          onClick={handlePhoneClick}
+        >
+          <FaPhoneAlt className="phone" />
+          <span>06.25.16.81.28</span>
+        </a>
         <li>
           <img src={insta} alt="insta" />
         </li>
