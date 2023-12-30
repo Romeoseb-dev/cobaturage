@@ -6,7 +6,7 @@
   background-image: url("../../src/assets/fond.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100rem;
 }
 .container-carous-wave {
   position: relative;

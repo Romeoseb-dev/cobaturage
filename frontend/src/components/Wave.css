@@ -4,14 +4,14 @@
 }
 .wave {
   position: absolute;
-  margin-top: 23.5rem;
+  margin-top: 18rem;
   width: 100%;
   height: 50%;
 }
 .boat {
   position: absolute;
   width: 22%;
-  margin-top: 28.5rem;
+  margin-top: 26rem;
   animation: boatMovement 20s linear infinite; /* Ajoutez cette ligne */
 }
 
@@ -35,5 +35,14 @@
   100% {
     transform: translateX(170%) translateY(20px);
     opacity: 0; /* Opacité minimale avant de revenir à gauche */
+  }
+}
+@media (max-width: 440px) {
+  .wave {
+    margin-top: 7rem;
+    height: 20%;
+  }
+  .boat {
+    margin-top: 12rem;
   }
 }
