@@ -12,12 +12,6 @@ function Carousel() {
     );
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? allFishs.length - 1 : prevIndex - 1
-    );
-  };
-
   useEffect(() => {
     const intervalId = setInterval(handleNext, 5000); // Défile toutes les 3 secondes
 
@@ -26,9 +20,6 @@ function Carousel() {
 
   return (
     <div className="carousel-container">
-      <button type="button" onClick={handlePrev}>
-        &lt;
-      </button>
       {allFishs.map((fish, index) => (
         <img
           key={fish.id}
@@ -37,9 +28,6 @@ function Carousel() {
           alt={fish.name}
         />
       ))}
-      <button type="button" onClick={handleNext}>
-        &gt;
-      </button>
     </div>
   );
 }
