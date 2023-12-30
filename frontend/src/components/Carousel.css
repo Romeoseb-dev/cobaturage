@@ -9,6 +9,7 @@
   width: 72%;
   height: auto;
   border: solid;
+  border-color: rgb(24, 10, 87);
   border-width: 5px;
   position: absolute;
   opacity: 0;
