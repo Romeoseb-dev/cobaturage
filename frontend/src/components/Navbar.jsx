@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { FaPhoneAlt } from "react-icons/fa";
 import insta from "../assets/insta.svg";
 import "./Navbar.css";
@@ -20,10 +22,18 @@ function Navbar() {
         <NavbarBurger />
       </ul>
       <ul className="list-navbar">
-        <li>ACCUEIL</li>
-        <li>PECHE EN MER</li>
-        <li>LE BATEAU</li>
-        <li>GALERIE</li>
+        <li>
+          <Link to="/">ACCUEIL</Link>
+        </li>
+        <li>
+          <Link to="/peche-en-mer">PECHE EN MER</Link>
+        </li>
+        <li>
+          <Link to="/bateau">LE BATEAU</Link>
+        </li>
+        <li>
+          <Link to="/galerie">GALERIE</Link>
+        </li>
       </ul>
       <ul className="list-contact">
         <a

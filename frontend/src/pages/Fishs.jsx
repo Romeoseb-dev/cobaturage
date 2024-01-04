@@ -1,11 +1,13 @@
 import React from "react";
 import { useLoaderData, Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function Fishs() {
   const allFishs = useLoaderData();
 
   return (
     <div>
+      <Navbar />
       <h1>Toutes les prises :</h1>
       {allFishs.map((fish) => (
         <Link to={`/fishs/${fish.id}`} key={fish.id}>

@@ -16,12 +16,17 @@
 }
 .list-navbar {
   list-style-type: none;
+
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 li {
   margin: 0 2rem 0 2rem;
+  color: aliceblue;
+}
+a {
+  text-decoration: none;
   color: aliceblue;
 }
 .phone {

@@ -9,6 +9,8 @@ import AdminFishs from "./pages/Admin/AdminFishs";
 import Administration from "./pages/Admin/Administration";
 import Home from "./pages/Home";
 import Fishs from "./pages/Fishs";
+import Peche from "./pages/Peche";
+import Bateau from "./pages/Bateau";
 
 const router = createBrowserRouter(
   [
@@ -41,6 +43,14 @@ const router = createBrowserRouter(
           .then((response) => response.data)
           .catch((err) => console.error(err));
       },
+    },
+    {
+      path: "/peche-en-mer",
+      element: <Peche />,
+    },
+    {
+      path: "/bateau",
+      element: <Bateau />,
     },
   ],
 
