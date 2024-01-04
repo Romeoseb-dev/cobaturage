@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 
 import "./Home.css";
 import Wave from "../components/Wave";
+import Description from "../components/Description";
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
       <Carousel />
 
       <Wave />
+
+      <Description />
     </div>
   );
 }
