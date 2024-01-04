@@ -9,7 +9,11 @@ function Navbar() {
     const phoneNumber = "06.25.16.81.28";
     window.location.href = `tel:${phoneNumber}`;
   };
-
+  const handleInstaClick = (e) => {
+    e.preventDefault();
+    const urlPageInstagram = "https://www.instagram.com/seb_fishingfr/";
+    window.open(urlPageInstagram, "_blank");
+  };
   return (
     <div className="navbar">
       <ul className="navbar-burger">
@@ -31,7 +35,12 @@ function Navbar() {
           <span>06.25.16.81.28</span>
         </a>
         <li>
-          <img src={insta} alt="insta" />
+          <a
+            href="https://www.instagram.com/seb_fishingfr/"
+            onClick={handleInstaClick}
+          >
+            <img src={insta} alt="insta" />
+          </a>
         </li>
       </ul>
     </div>
