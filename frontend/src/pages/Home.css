@@ -3,7 +3,7 @@
   padding: 0;
 }
 .all-page {
-  background-image: url("../../src/assets/fond.jpg");
+  background-color: rgb(22, 77, 144);
   background-size: cover;
   background-position: center;
   height: 100rem;

@@ -10,39 +10,48 @@
 }
 .boat {
   position: absolute;
-  width: 22%;
+  width: 18%;
   margin-top: 26rem;
-  animation: boatMovement 20s linear infinite; /* Ajoutez cette ligne */
+  animation: boatMovement 20s linear infinite;
 }
 
 @keyframes boatMovement {
   0% {
     transform: translateX(-200%) translateY(20px);
-    opacity: 0; /* Opacité maximale au début de l'animation */
+    opacity: 0;
   }
   25% {
     transform: translateX(-100%) translateY(-10px);
-    opacity: 1; /* Opacité maximale */
+    opacity: 1;
   }
   50% {
     transform: translateX(0%) translateY(20px);
-    opacity: 1; /* Opacité maximale */
+    opacity: 1;
   }
   75% {
     transform: translateX(100%) translateY(-20px);
-    opacity: 1; /* Opacité maximale */
+    opacity: 1;
   }
   100% {
     transform: translateX(170%) translateY(20px);
-    opacity: 0; /* Opacité minimale avant de revenir à gauche */
+    opacity: 0;
   }
 }
-@media (max-width: 440px) {
+@media screen and (min-width: 100px) and (max-width: 400px) {
   .wave {
     margin-top: 7rem;
     height: 20%;
   }
   .boat {
     margin-top: 12rem;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2200px) {
+  .wave {
+    margin-top: 33rem;
+    height: 40%;
+  }
+  .boat {
+    margin-top: 39rem;
   }
 }
