@@ -22,7 +22,7 @@
   align-items: center;
 }
 li {
-  margin: 0 2rem 0 2rem;
+  margin: 0 2rem 0 1rem;
   color: aliceblue;
 }
 a {
@@ -44,7 +44,7 @@ a {
   color: aliceblue;
   text-decoration: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .list-navbar {
     display: none;
   }
