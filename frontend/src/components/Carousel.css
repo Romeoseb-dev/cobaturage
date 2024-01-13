@@ -1,0 +1,40 @@
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.carousel-image {
+  width: 50rem;
+  height: auto;
+  border: solid;
+  border-color: rgb(252, 252, 253);
+  border-width: 5px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.9s ease-in-out;
+}
+.coboaturage {
+  position: absolute;
+  opacity: 0.5;
+  width: 35rem;
+  height: auto;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .carousel-image {
+    width: 100%;
+  }
+  .coboaturage {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2200px) {
+  .carousel-image {
+    width: 80rem;
+  }
+}

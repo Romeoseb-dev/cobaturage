@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.all-page {
+  background-color: rgb(17, 67, 128);
+  background-size: cover;
+  background-position: center;
+  height: 100rem;
+  display: flex;
+  flex-direction: column;
+}
+.container-carous-wave {
+  position: relative;
+}

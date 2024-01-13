@@ -3,10 +3,14 @@
 /* ************************************************************************* */
 
 // Import the manager modules responsible for handling data operations on the tables
+const FishManager = require("./models/FishManager");
 const ItemManager = require("./models/ItemManager");
+const MethodManager = require("./models/MethodManager");
 
 const managers = [
   ItemManager,
+  FishManager,
+  MethodManager,
   // Add other managers here
 ];
 
