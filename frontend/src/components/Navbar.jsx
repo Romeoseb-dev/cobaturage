@@ -34,6 +34,9 @@ function Navbar() {
         <li>
           <Link to="/galerie">GALERIE</Link>
         </li>
+        <li>
+          <Link to="/contact">CONTACT</Link>
+        </li>
       </ul>
       <ul className="list-contact">
         <a
