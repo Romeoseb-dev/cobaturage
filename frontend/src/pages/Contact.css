@@ -1,10 +1,11 @@
 .all-page-contact {
   background-color: rgb(17, 67, 128);
+  padding-bottom: 3rem;
 }
 .form-contact-container {
-  background-color: #2b2d31;
+  background-color: hsl(0, 0%, 3%);
   color: #ffffff;
-  width: 70%;
+  width: 80%;
   height: 40rem;
   border-radius: 20px;
   margin: auto;
@@ -50,7 +51,7 @@
   border: none;
 }
 .form-contact-submit {
-  background-color: #5865f2;
+  background-color: #0b1dea;
 }
 .container-name {
   display: flex;
@@ -87,7 +88,7 @@
   outline: none;
   border: none;
   color: aliceblue;
-  margin-top: 1rem;
+  margin-top: 2rem;
   width: 7rem;
   height: 1.5rem;
   border-radius: 10px;
@@ -102,8 +103,8 @@
     width: 80%;
   }
   .form-contact-container {
-    width: 100%;
-    height: 50rem;
+    width: 80%;
+    height: 100%;
   }
   .container-name {
     display: flex;
@@ -117,7 +118,7 @@
     width: 100%;
   }
   .input {
-    width: 100%;
+    width: 80%;
   }
   .textarea-form-contact {
     margin-top: 0.5rem;

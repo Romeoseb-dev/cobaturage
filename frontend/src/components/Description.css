@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40rem;
+  padding: 2rem;
 }
 .description {
   width: 70%;

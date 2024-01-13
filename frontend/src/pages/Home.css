@@ -3,10 +3,10 @@
   padding: 0;
 }
 .all-page {
-  background-color: rgb(17, 67, 128);
+  background-color: rgb(24, 10, 87);
   background-size: cover;
   background-position: center;
-  height: 100rem;
+
   display: flex;
   flex-direction: column;
 }
