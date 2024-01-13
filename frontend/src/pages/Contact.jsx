@@ -5,6 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 import InputContact from "../components/InputContact";
 import connexion from "../services/connexion";
+import Navbar from "../components/Navbar";
+
+import "./Contact.css";
 
 const mail = {
   name: "",
@@ -36,68 +39,71 @@ function Contact() {
     }
   };
   return (
-    <div className="form-contact-container">
-      <h3 className="contact">Nous contacter</h3>
-      <div className="top-form-container">
-        <form className="form-contact" onSubmit={handleSubmit}>
-          <div className="container-name">
-            <div className="name">
-              <InputContact
-                label="nom :"
-                name="name"
-                type="text"
-                onChange={handleChange}
-                value={formValue.name}
-              />
+    <div className="all-page-contact">
+      <Navbar />
+      <div className="form-contact-container">
+        <h3 className="contact">ME CONTACTER :</h3>
+        <div className="top-form-container">
+          <form className="form-contact" onSubmit={handleSubmit}>
+            <div className="container-name">
+              <div className="name">
+                <InputContact
+                  label="nom :"
+                  name="name"
+                  type="text"
+                  onChange={handleChange}
+                  value={formValue.name}
+                />
+              </div>
+              <div className="surname">
+                <InputContact
+                  label="prénom :"
+                  name="surname"
+                  type="text"
+                  onChange={handleChange}
+                  value={formValue.surname}
+                />
+              </div>
             </div>
-            <div className="surname">
-              <InputContact
-                label="prénom :"
-                name="surname"
-                type="text"
-                onChange={handleChange}
-                value={formValue.surname}
-              />
+            <div className="container-email">
+              <div className="email">
+                <InputContact
+                  label="email :"
+                  name="email"
+                  type="text"
+                  onChange={handleChange}
+                  value={formValue.email}
+                />
+              </div>
+              <div className="number">
+                <InputContact
+                  label="numéro :"
+                  name="number"
+                  type="text"
+                  onChange={handleChange}
+                  value={formValue.number}
+                />
+              </div>
             </div>
-          </div>
-          <div className="container-email">
-            <div className="email">
-              <InputContact
-                label="email :"
-                name="email"
-                type="text"
+            <label className="container-textera">
+              <span className="label-text-form-contact">message :</span>
+              <textarea
+                className="textarea-form-contact"
+                name="message"
                 onChange={handleChange}
-                value={formValue.email}
+                maxLength={250}
+                value={formValue.message}
+                required
               />
-            </div>
-            <div className="number">
-              <InputContact
-                label="numéro (facultatif):"
-                name="number"
-                type="text"
-                onChange={handleChange}
-                value={formValue.number}
-              />
-            </div>
-          </div>
-          <label className="container-textera">
-            <span className="label-text-form-contact">message :</span>
-            <textarea
-              className="textarea-form-contact"
-              name="message"
-              onChange={handleChange}
-              maxLength={250}
-              value={formValue.message}
-              required
+            </label>
+            <input
+              className="form-contact-submit"
+              type="submit"
+              value="Envoyer"
             />
-          </label>
-          <input
-            className="form-contact-submit"
-            type="submit"
-            value="Envoyer"
-          />
-        </form>
-        <ToastContainer />
+          </form>
+          <ToastContainer />
+        </div>
       </div>
     </div>
   );
