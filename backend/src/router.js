@@ -10,6 +10,7 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 const fishControllers = require("./controllers/fishControllers");
 const methodControllers = require("./controllers/methodControllers");
+const ContactControllers = require("./controllers/contactControllers");
 
 // Route to get a list of items
 router.get("/items", itemControllers.browse);
@@ -24,6 +25,7 @@ router.get("/methods/:id", methodControllers.read);
 // Route to add a new item
 router.post("/items", itemControllers.add);
 router.post("/fishs", fishControllers.add);
+router.post("/contact", ContactControllers.send);
 
 /* ************************************************************************* */
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import "./NavbarBurger.css";
@@ -30,10 +31,11 @@ function NavbarBurger() {
       )}
       {isOpen && (
         <div className="menu">
-          <a href="/">Accueil</a>
-          <a href="/en mer">Peche en mer</a>
-          <a href="/bateau">Le bateau</a>
-          <a href="/galerie">Galerie</a>
+          <Link to="/">Accueil</Link>
+          <Link to="/peche-en-mer">Peche en mer</Link>
+          <Link to="/bateau">Le bateau</Link>
+          <Link to="/galerie">Galerie</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       )}
     </div>

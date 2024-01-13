@@ -14,7 +14,7 @@ function Carousel() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(handleNext, 5000); // Défile toutes les 3 secondes
+    const intervalId = setInterval(handleNext, 5000);
 
     return () => clearInterval(intervalId);
   }, [currentIndex]);
