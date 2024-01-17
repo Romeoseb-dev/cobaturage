@@ -17,9 +17,25 @@
 }
 .coboaturage {
   position: absolute;
-  opacity: 0.5;
-  width: 35rem;
-  height: auto;
+  color: aliceblue;
+  font-size: 5rem;
+  opacity: 0.6;
+  margin-top: 5rem;
+  text-align: center;
+  animation: rotationAnimation 8s linear infinite;
+}
+
+/* Définition de l'animation */
+@keyframes rotationAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 
 .carousel-image.active {
@@ -30,7 +46,8 @@
     width: 100%;
   }
   .coboaturage {
-    width: 50%;
+    font-size: 2rem;
+    margin-top: 3rem;
   }
 }
 @media screen and (min-width: 1500px) and (max-width: 2200px) {

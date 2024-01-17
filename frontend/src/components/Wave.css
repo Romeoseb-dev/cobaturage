@@ -46,6 +46,15 @@
     margin-top: 12rem;
   }
 }
+@media screen and (min-width: 800px) and (max-width: 1500px) {
+  .wave {
+    margin-top: 17rem;
+    height: 40%;
+  }
+  .boat {
+    margin-top: 23rem;
+  }
+}
 @media screen and (min-width: 1500px) and (max-width: 2200px) {
   .wave {
     margin-top: 33rem;

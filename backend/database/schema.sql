@@ -36,5 +36,15 @@ CREATE TABLE comment (
     id INT AUTO_INCREMENT PRIMARY KEY,
     mail VARCHAR(100) NOT NULL,
     name VARCHAR(50) NOT NULL,
-    comment VARCHAR(455) NOT NULL
+    comment VARCHAR(455) NOT NULL,
+    rating INT CHECK (rating >= 0 AND rating <= 5)
 );
+
+INSERT INTO comment (mail, name, comment, rating)
+VALUES ('fake1@example.com', 'John Doe', 'super journée', 4);
+
+INSERT INTO comment (mail, name, comment, rating)
+VALUES ('fake2@example.com', 'Jane Smith', 'excellent.', 5);
+
+INSERT INTO comment (mail, name, comment, rating)
+VALUES ('fake3@example.com', 'Bob Johnson', 'Top', 5);

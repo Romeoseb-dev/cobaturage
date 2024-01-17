@@ -1,14 +1,14 @@
 const AbstractManager = require("./AbstractManager");
 
-class MethodManager extends AbstractManager {
+class CommentManager extends AbstractManager {
   constructor() {
-    super({ table: "methods" });
+    super({ table: "comment" });
   }
 
-  async create(method) {
+  async create(comment) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (method) values (?)`,
-      [method.method]
+      `insert into ${this.table} (mail,name,comment) values (?,?,?)`,
+      [comment.mail, comment.name, comment.comment]
     );
 
     return result.insertId;
@@ -30,4 +30,4 @@ class MethodManager extends AbstractManager {
   }
 }
 
-module.exports = MethodManager;
+module.exports = CommentManager;

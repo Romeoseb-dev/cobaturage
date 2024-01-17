@@ -6,11 +6,13 @@
 const FishManager = require("./models/FishManager");
 const ItemManager = require("./models/ItemManager");
 const MethodManager = require("./models/MethodManager");
+const CommentManager = require("./models/CommentManager");
 
 const managers = [
   ItemManager,
   FishManager,
   MethodManager,
+  CommentManager,
   // Add other managers here
 ];
 
