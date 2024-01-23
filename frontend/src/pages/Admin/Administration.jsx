@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Administration() {
   return (
@@ -9,7 +9,6 @@ function Administration() {
         <Link to="/admin">Dashboard</Link>
         <Link to="/admin/prises">Prises</Link>
       </nav>
-      <Outlet />
     </div>
   );
 }

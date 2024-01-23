@@ -11,65 +11,65 @@ import Home from "./pages/Home";
 import Fishs from "./pages/Fishs";
 import Peche from "./pages/Peche";
 import Bateau from "./pages/Bateau";
+import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Home />,
-      loader: async () => {
-        return connexion
-          .get(`/fishs`)
-          .then((response) => response.data)
-          .catch((err) => console.error(err));
-      },
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    loader: async () => {
+      return connexion
+        .get(`/fishs`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
     },
-    {
-      path: "/galerie",
-      element: <Fishs />,
-      loader: async () => {
-        return connexion
-          .get(`/fishs`)
-          .then((response) => response.data)
-          .catch((err) => console.error(err));
-      },
+  },
+  {
+    path: "/galerie",
+    element: <Fishs />,
+    loader: async () => {
+      return connexion
+        .get(`/fishs`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
     },
-    {
-      path: "/galerie/:id",
-      element: <OneFish />,
-      loader: async ({ params }) => {
-        return connexion
-          .get(`/fishs/${params.id}`)
-          .then((response) => response.data)
-          .catch((err) => console.error(err));
-      },
+  },
+  {
+    path: "/galerie/:id",
+    element: <OneFish />,
+    loader: async ({ params }) => {
+      return connexion
+        .get(`/fishs/${params.id}`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
     },
-    {
-      path: "/peche-en-mer",
-      element: <Peche />,
-    },
-    {
-      path: "/bateau",
-      element: <Bateau />,
-    },
-    {
-      path: "/contact",
-      element: <Contact />,
-    },
-  ],
-
+  },
+  {
+    path: "/peche-en-mer",
+    element: <Peche />,
+  },
+  {
+    path: "/bateau",
+    element: <Bateau />,
+  },
+  {
+    path: "/avis",
+    element: <Comments />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
   {
     path: "/admin",
     element: <Administration />,
-    children: [
-      {
-        path: "prises",
-        element: <AdminFishs />,
-      },
-    ],
-  }
-);
+  },
+  {
+    path: "/admin/prises",
+    element: <AdminFishs />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

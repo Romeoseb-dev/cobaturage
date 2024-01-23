@@ -11,8 +11,28 @@
   font-size: 1.5rem;
 }
 .question {
-  color: rgb(8, 8, 8);
+  color: aliceblue;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: apparitionQuestion 1s ease-in-out forwards;
+  animation-delay: 1s; /* Délai de 1 seconde avant le début de l'animation */
+}
+.text {
+  opacity: 0;
+  animation: apparitionQuestion 0.5s ease-in-out forwards;
+  animation-delay: 2.5s; /* Délai de 1 seconde avant le début de l'animation */
+}
+
+@keyframes apparitionQuestion {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apparitionQuestion {
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 100px) and (max-width: 400px) {
   .all-descri {

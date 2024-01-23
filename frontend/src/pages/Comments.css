@@ -1,0 +1,78 @@
+.all-page-comments {
+  background-color: #091486;
+  padding-bottom: 5rem;
+}
+.container-com {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 3%);
+  color: #ffffff;
+  width: 80%;
+  height: 45rem;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+}
+.form-com {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label-mail,
+.label-name,
+.label-comment {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.span-com {
+  margin-bottom: 0.5rem;
+}
+.textarea-form-comment {
+  background-color: #383a40;
+  margin: 1rem;
+  border-radius: 15px;
+  padding: 5px 5px;
+  color: aliceblue;
+  border: none;
+  display: flex;
+  justify-content: center;
+  width: 19rem;
+  height: 10rem;
+  margin: auto;
+  font-size: 1.2rem;
+}
+.input-com {
+  padding: 1rem;
+  margin: 0.5rem 0 3rem 0;
+  color: aliceblue;
+  outline: none;
+  background-color: #383a40;
+  height: 1.2rem;
+  width: 18rem;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.2rem;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.star-com {
+  margin-top: 0.5rem;
+}
+.sub-com {
+  background-color: #0b1dea;
+  outline: none;
+  border: none;
+  color: aliceblue;
+  margin-top: 2rem;
+  width: 7rem;
+  height: 1.5rem;
+  border-radius: 10px;
+}

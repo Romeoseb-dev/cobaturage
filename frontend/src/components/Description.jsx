@@ -6,7 +6,7 @@ function Description() {
     <div className="all-descri">
       <div className="description">
         <h1 className="question">Pourquoi le Coboaturage ?</h1>
-        <p>
+        <p className="text">
           Embarquez avec moi pour une aventure de pêche en mer au départ de
           Canet !<br />
           En tant que pêcheur passionné, je vous propose de partager les frais à

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import coboaturage from "../assets/coboaturage.png";
+
 import "./Carousel.css";
 
 function Carousel() {
@@ -29,7 +29,7 @@ function Carousel() {
           alt={fish.name}
         />
       ))}
-      <img className="coboaturage" src={coboaturage} alt="coboaturage" />
+      <h1 className="coboaturage">COBATURAGE</h1>
     </div>
   );
 }

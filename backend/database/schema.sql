@@ -30,3 +30,17 @@ INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("pelamide","3kg","
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("liche","14kg","https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/414697890_3122013281262404_3228243077960122437_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=jsO5wZaOntkAX9DqVfC&_nc_oc=AQkWFGzGHC0IUkN6zn8grEXGTNpCH4iS0OPizaAJXRT_zOyddCNpApTZQfcO_GubfSSRfLVtEXyTH_KFZzkhwEvT&_nc_ht=scontent-cdg4-2.xx&oh=00_AfCpKM97VqfHcRNNjirOpLzrkNuIt10g0FBbCoFM7SOxYQ&oe=65A35EBB",2022,1);
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("seriole","16kg","https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/414662519_3122013114595754_4906505214395501642_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=nPcc5H85vEQAX8y1CWl&_nc_ht=scontent-cdg4-1.xx&oh=00_AfDL5AAJSP2FCmd2cQ99D-YF0fsD3Py6TXlrqBBMGGGVdw&oe=65A2B494",2022,1);
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("daurade","3kg","https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/414698585_3122013181262414_1374057770038656129_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=X-B3smwdZ9IAX9TFqAn&_nc_ht=scontent-cdg4-2.xx&oh=00_AfABN8178S3VsoZ6U325sISch3pq77CA8xNXCvOpqf2-zw&oe=65A2B8AD",2023,3);
+
+
+
+
+
+
+create table comment (
+  id int unsigned primary key auto_increment not null,
+  mail VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  avis VARCHAR(255) NOT NULL,
+  rating INT NOT NULL
+);
+

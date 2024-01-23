@@ -36,6 +36,26 @@ const seed = async () => {
     // Wait for all the insertion queries to complete
     await Promise.all(queries);
 
+    const queriesComment = [];
+
+    // Insert fake data into the 'comment' table
+    for (let i = 0; i < 3; i += 1) {
+      queriesComment.push(
+        database.query(
+          "insert into comment(mail, name, commentaire, rating) values (?, ?, ?, ?)",
+          [
+            faker.lorem.words({ min: 1, max: 3 }),
+            faker.lorem.words({ min: 1, max: 3 }),
+            faker.lorem.paragraph(),
+            faker.number.int(1000),
+          ]
+        )
+      );
+    }
+
+    // Wait for all the insertion queries to complete
+    await Promise.all(queriesComment);
+
     // Close the database connection
     database.end();
 
