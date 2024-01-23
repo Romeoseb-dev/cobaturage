@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import StarRatings from "react-star-ratings";
 import Navbar from "../components/Navbar";
 import connexion from "../services/connexion";
+import "./Comments.css";
 
 const com = {
   mail: "",
@@ -38,26 +39,27 @@ function Comments() {
     }));
   };
   return (
-    <div>
+    <div className="all-page-comments">
       <Navbar />
-      <div className="container-admin">
-        <h2>Ajouté un commentaire :</h2>
+      <div className="container-com">
+        <h2>AJOUTER UN COMMENTAIRE:</h2>
         <ToastContainer />
-        <form onSubmit={handleSubmit} className="form-admin">
-          Ajout d'un(e)
-          <label>
-            mail
+        <form onSubmit={handleSubmit} className="form-com">
+          <label className="label-mail">
+            Mail:
             <input
-              type="text"
+              className="input-com"
+              type="email"
               name="mail"
               required
               value={formValue.mail}
               onChange={handleChange}
             />
           </label>
-          <label>
-            name
+          <label className="label-name">
+            Nom:
             <input
+              className="input-com"
               type="text"
               name="name"
               required
@@ -65,27 +67,32 @@ function Comments() {
               onChange={handleChange}
             />
           </label>
-          <label>
-            comment
-            <input
-              type="text"
+          <label className="label-comment">
+            <span className="span-com">Commentaire:</span>
+            <textarea
+              className="textarea-form-comment"
               name="avis"
-              required
-              value={formValue.avis}
               onChange={handleChange}
+              maxLength={250}
+              value={formValue.avis}
+              required
             />
           </label>
-          <label htmlFor="notation">
-            Notation
-            <StarRatings
-              rating={formValue.rating}
-              starRatedColor="gold"
-              changeRating={handleNotation}
-              numberOfStars={5}
-              name="rating"
-            />
+          <label htmlFor="notation" className="note">
+            Note:
+            <div className="star-com">
+              <StarRatings
+                rating={formValue.rating}
+                starRatedColor="gold"
+                changeRating={handleNotation}
+                numberOfStars={5}
+                name="rating"
+              />
+            </div>
           </label>
-          <button type="submit">Ajouter</button>
+          <button className="sub-com" type="submit">
+            Ajouter
+          </button>
         </form>
       </div>
     </div>
