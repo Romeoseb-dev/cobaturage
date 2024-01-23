@@ -9,8 +9,8 @@
   width: 50rem;
   height: auto;
   border: solid;
-  border-color: rgb(252, 252, 253);
-  border-width: 5px;
+  border-color: rgb(8, 8, 8);
+  border-width: 9px;
   position: absolute;
   opacity: 0;
   transition: opacity 1.9s ease-in-out;

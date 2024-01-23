@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import StarRatings from "react-star-ratings";
 import Navbar from "../components/Navbar";
 import connexion from "../services/connexion";
+import "./Comment.css";
 
 const commentType = {
   mail: "",
@@ -39,16 +40,16 @@ function Comment() {
     }
   };
   return (
-    <div>
+    <div className="all-page-comment">
       <Navbar />
-      <div className="container-admin">
-        <h2>Ajouté un commentaire :</h2>
+      <div className="container-comment">
+        <h2 className="add-comment">AJOUTER UN AVIS :</h2>
         <ToastContainer />
-        <form onSubmit={postComment} className="form-admin">
-          Ajout d'un(e)
+        <form className="form-comment" onSubmit={postComment}>
           <label>
-            mail
+            Mail
             <input
+              className="mail"
               type="text"
               name="mail"
               required
@@ -57,8 +58,9 @@ function Comment() {
             />
           </label>
           <label>
-            name
+            Nom
             <input
+              className="name"
               type="text"
               name="name"
               required
@@ -67,17 +69,17 @@ function Comment() {
             />
           </label>
           <label>
-            comment
+            Commentaire (facultatif)
             <input
+              className="comment"
               type="text"
               name="comment"
-              required
               value={comment.comment}
               onChange={handleComment}
             />
           </label>
-          <label htmlFor="notation">
-            Notation
+          <label className="notation" htmlFor="notation">
+            Note
             <StarRatings
               rating={comment.notation}
               starRatedColor="gold"
@@ -86,7 +88,9 @@ function Comment() {
               name="rating"
             />
           </label>
-          <button type="submit">Ajouter</button>
+          <button className="form-contact-submit" type="submit">
+            Ajouter
+          </button>
         </form>
       </div>
     </div>
