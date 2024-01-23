@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import Fishs from "./pages/Fishs";
 import Peche from "./pages/Peche";
 import Bateau from "./pages/Bateau";
-import Comment from "./pages/Comment";
+import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
@@ -54,8 +54,8 @@ const router = createBrowserRouter([
     element: <Bateau />,
   },
   {
-    path: "/comment",
-    element: <Comment />,
+    path: "/avis",
+    element: <Comments />,
   },
   {
     path: "/contact",

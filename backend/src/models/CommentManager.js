@@ -10,11 +10,11 @@ class CommentManager extends AbstractManager {
   // The C of CRUD - Create operation
 
   async create(comment) {
-    const { mail, name, commentaire, rating } = comment;
+    const { mail, name, avis, rating } = comment;
     // Execute the SQL INSERT query to add a new comment to the "comment" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (mail, name, commentaire, rating) values (?, ?, ?, ?)`,
-      [mail, name, commentaire, rating]
+      `insert into ${this.table} (mail, name, avis, rating) values (?, ?, ?, ?)`,
+      [mail, name, avis, rating]
     );
 
     // Return the ID of the newly inserted comment

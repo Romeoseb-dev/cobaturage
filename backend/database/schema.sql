@@ -34,15 +34,13 @@ INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("daurade","3kg","h
 
 
 
+
+
 create table comment (
   id int unsigned primary key auto_increment not null,
   mail VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL,
-  commentaire VARCHAR(255) NOT NULL,
-  rating INT CHECK (rating >= 0 AND rating <= 5)
+  avis VARCHAR(255) NOT NULL,
+  rating INT NOT NULL
 );
-INSERT INTO comment (mail, name, commentaire, rating) VALUES
-('john.doe@example.com', 'John Doe', 'Très bon produit!', 4),
-('jane.smith@example.com', 'Jane Smith', 'Service client exceptionnel', 5),
-('bob.jones@example.com', 'Bob Jones', 'Je ne suis pas satisfait du tout', 2);
 

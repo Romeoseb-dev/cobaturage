@@ -5,38 +5,37 @@ import StarRatings from "react-star-ratings";
 import Navbar from "../components/Navbar";
 import connexion from "../services/connexion";
 
-const commentType = {
+const com = {
   mail: "",
   name: "",
-  commentaire: "",
+  avis: "",
   rating: 5,
 };
+function Comments() {
+  const [formValue, setFormValue] = useState(com);
 
-function Comment() {
-  const [comment, setComment] = useState(commentType);
-  const handleComment = (event) => {
-    setComment((previouState) => ({
-      ...previouState,
-      [event.target.name]: event.target.value,
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValue((prevData) => ({
+      ...prevData,
+      [name]: value,
     }));
   };
-
-  const handleNotation = (nouvelleNotation) => {
-    setComment((etatPrecedent) => ({
-      ...etatPrecedent,
-      notation: nouvelleNotation,
-    }));
-  };
-
-  const postComment = async (event) => {
-    event.preventDefault();
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      await connexion.post("/comments", comment);
-      toast.success("Commentaire ajouté!");
+      await connexion.post("/comments", formValue);
+      toast.success("Commentaire envoyé avec succès!");
+      setFormValue(com);
     } catch (error) {
-      toast.error("Erreur, Non ajouté!");
+      toast.error("Erreur lors de l'envoi du commentaire");
     }
+  };
+  const handleNotation = (nouvelleNotation) => {
+    setFormValue((etatPrecedent) => ({
+      ...etatPrecedent,
+      rating: nouvelleNotation,
+    }));
   };
   return (
     <div>
@@ -44,7 +43,7 @@ function Comment() {
       <div className="container-admin">
         <h2>Ajouté un commentaire :</h2>
         <ToastContainer />
-        <form onSubmit={postComment} className="form-admin">
+        <form onSubmit={handleSubmit} className="form-admin">
           Ajout d'un(e)
           <label>
             mail
@@ -52,8 +51,8 @@ function Comment() {
               type="text"
               name="mail"
               required
-              value={comment.mail}
-              onChange={handleComment}
+              value={formValue.mail}
+              onChange={handleChange}
             />
           </label>
           <label>
@@ -62,24 +61,24 @@ function Comment() {
               type="text"
               name="name"
               required
-              value={comment.name}
-              onChange={handleComment}
+              value={formValue.name}
+              onChange={handleChange}
             />
           </label>
           <label>
             comment
             <input
               type="text"
-              name="commentaire"
+              name="avis"
               required
-              value={comment.commentaire}
-              onChange={handleComment}
+              value={formValue.avis}
+              onChange={handleChange}
             />
           </label>
           <label htmlFor="notation">
             Notation
             <StarRatings
-              rating={comment.notation}
+              rating={formValue.rating}
               starRatedColor="gold"
               changeRating={handleNotation}
               numberOfStars={5}
@@ -93,4 +92,4 @@ function Comment() {
   );
 }
 
-export default Comment;
+export default Comments;

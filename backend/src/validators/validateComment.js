@@ -4,8 +4,8 @@ const getCommentSchema = () => {
   return Joi.object({
     id: Joi.number().presence("optional"),
     mail: Joi.string().max(255).presence("required"),
-    name: Joi.string().max(255).presence("required"),
-    commentaire: Joi.string().presence("optional"),
+    name: Joi.string().max(50).presence("required"),
+    avis: Joi.string().max(255).presence("required"),
     rating: Joi.number().presence("required"),
   });
 };
