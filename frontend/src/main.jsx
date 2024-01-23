@@ -54,7 +54,7 @@ const router = createBrowserRouter([
     element: <Bateau />,
   },
   {
-    path: "/avis",
+    path: "/comment",
     element: <Comment />,
   },
   {

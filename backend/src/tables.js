@@ -9,10 +9,11 @@ const MethodManager = require("./models/MethodManager");
 const CommentManager = require("./models/CommentManager");
 
 const managers = [
+  CommentManager,
   ItemManager,
   FishManager,
   MethodManager,
-  CommentManager,
+
   // Add other managers here
 ];
 

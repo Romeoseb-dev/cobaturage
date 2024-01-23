@@ -8,7 +8,7 @@ import connexion from "../services/connexion";
 const commentType = {
   mail: "",
   name: "",
-  comment: "",
+  commentaire: "",
   rating: 5,
 };
 
@@ -32,7 +32,7 @@ function Comment() {
     event.preventDefault();
 
     try {
-      await connexion.post("/avis", comment);
+      await connexion.post("/comments", comment);
       toast.success("Commentaire ajouté!");
     } catch (error) {
       toast.error("Erreur, Non ajouté!");
@@ -70,9 +70,9 @@ function Comment() {
             comment
             <input
               type="text"
-              name="comment"
+              name="commentaire"
               required
-              value={comment.comment}
+              value={comment.commentaire}
               onChange={handleComment}
             />
           </label>

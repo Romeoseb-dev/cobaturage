@@ -35,7 +35,7 @@ function Navbar() {
           <Link to="/galerie">GALERIE</Link>
         </li>
         <li>
-          <Link to="/avis">AVIS</Link>
+          <Link to="/comment">AVIS</Link>
         </li>
         <li>
           <Link to="/contact">CONTACT</Link>
