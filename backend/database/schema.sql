@@ -33,3 +33,14 @@ INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("daurade","3kg","h
 
 
 
+
+
+
+create table comment (
+  id int unsigned primary key auto_increment not null,
+  mail VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  avis VARCHAR(255) NOT NULL,
+  rating INT NOT NULL
+);
+
