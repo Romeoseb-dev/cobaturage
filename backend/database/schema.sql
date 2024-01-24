@@ -32,19 +32,4 @@ INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("seriole","16kg","
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("daurade","3kg","https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/414698585_3122013181262414_1374057770038656129_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=X-B3smwdZ9IAX9TFqAn&_nc_ht=scontent-cdg4-2.xx&oh=00_AfABN8178S3VsoZ6U325sISch3pq77CA8xNXCvOpqf2-zw&oe=65A2B8AD",2023,3);
 
 
-CREATE TABLE comment (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    mail VARCHAR(100) NOT NULL,
-    name VARCHAR(50) NOT NULL,
-    comment VARCHAR(455) NOT NULL,
-    rating INT CHECK (rating >= 0 AND rating <= 5)
-);
 
-INSERT INTO comment (mail, name, comment, rating)
-VALUES ('fake1@example.com', 'John Doe', 'super journée', 4);
-
-INSERT INTO comment (mail, name, comment, rating)
-VALUES ('fake2@example.com', 'Jane Smith', 'excellent.', 5);
-
-INSERT INTO comment (mail, name, comment, rating)
-VALUES ('fake3@example.com', 'Bob Johnson', 'Top', 5);
