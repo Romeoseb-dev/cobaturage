@@ -42,7 +42,7 @@ function Comments() {
     <div className="all-page-comments">
       <Navbar />
       <div className="container-com">
-        <h2>AJOUTER UN COMMENTAIRE:</h2>
+        <h2 className="add-comment">AJOUTER UN COMMENTAIRE:</h2>
         <ToastContainer />
         <form onSubmit={handleSubmit} className="form-com">
           <label className="label-mail">
@@ -98,5 +98,4 @@ function Comments() {
     </div>
   );
 }
-
 export default Comments;

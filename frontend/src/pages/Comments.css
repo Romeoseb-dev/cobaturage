@@ -1,6 +1,10 @@
 .all-page-comments {
   background-color: #091486;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
+}
+.add-comment {
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 .container-com {
   display: flex;
@@ -8,7 +12,7 @@
   align-items: center;
   background-color: hsl(0, 0%, 3%);
   color: #ffffff;
-  width: 80%;
+  width: 60%;
   height: 45rem;
   border-radius: 20px;
   margin: auto;
@@ -71,8 +75,16 @@
   outline: none;
   border: none;
   color: aliceblue;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 7rem;
   height: 1.5rem;
   border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .container-com {
+    width: 80%;
+  }
+  .add-comment {
+    font-size: 1.2rem;
+  }
 }
