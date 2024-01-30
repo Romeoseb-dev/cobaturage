@@ -1,0 +1,11 @@
+.img-selected-fish {
+  width: 50vw;
+  display: flex;
+  margin: auto;
+  margin-top: 5vw;
+  margin-bottom: 4vw;
+}
+.img-carousel-galerie {
+  width: 10vw;
+  margin: 0.5rem;
+}

@@ -5,7 +5,7 @@ function Description() {
   return (
     <div className="all-descri">
       <div className="description">
-        <h1 className="question">Pourquoi le Coboaturage ?</h1>
+        <h1 className="question">Pourquoi le Cobaturage ?</h1>
         <p className="text">
           Embarquez avec moi pour une aventure de pêche en mer au départ de
           Canet !<br />
