@@ -36,6 +36,16 @@ const router = createBrowserRouter([
     },
   },
   {
+    path: "/avis",
+    element: <Comments />,
+    loader: async () => {
+      return connexion
+        .get(`/comments`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
+    },
+  },
+  {
     path: "/galerie/:id",
     element: <OneFish />,
     loader: async ({ params }) => {

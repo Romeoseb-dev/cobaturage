@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StarRatings from "react-star-ratings";
 import Navbar from "../components/Navbar";
+import CommentAdd from "../components/CommentAdd";
 import connexion from "../services/connexion";
 import "./Comments.css";
 
@@ -41,6 +42,7 @@ function Comments() {
   return (
     <div className="all-page-comments">
       <Navbar />
+      <CommentAdd />
       <div className="container-com">
         <h2 className="add-comment">AJOUTER UN COMMENTAIRE:</h2>
         <ToastContainer />
