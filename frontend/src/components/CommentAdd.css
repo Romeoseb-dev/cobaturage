@@ -1,0 +1,23 @@
+.all-page-comment-add {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: aqua;
+}
+.comment-avis {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.bloc-avis {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.comment-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 30rem;
+  margin: 1rem;
+}
