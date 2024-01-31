@@ -78,6 +78,16 @@ const router = createBrowserRouter([
   {
     path: "/admin/prises",
     element: <AdminFishs />,
+    loader: async () => {
+      return connexion
+        .get(`/fishs`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
+    },
+  },
+  {
+    path: "/admin/prises",
+    element: <AdminFishs />,
   },
 ]);
 

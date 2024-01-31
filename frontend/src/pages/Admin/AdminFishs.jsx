@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../components/Navbar";
+import AllAdminFishs from "./AllAdminFishs";
 import connexion from "../../services/connexion";
 
 import "./AdminFishs.css";
@@ -54,6 +55,7 @@ function AdminFishs() {
 
       <div className="all-page-admin-fish">
         <h2>Administration d'une prise:</h2>
+        <AllAdminFishs />
         <ToastContainer />
         <form onSubmit={postFishs} className="form-admin">
           Ajout d'un(e)
@@ -117,9 +119,7 @@ function AdminFishs() {
               ))}
             </select>
           </label>
-          <button className="sub-com" type="submit">
-            Ajouter
-          </button>
+          <button type="submit">Ajouter</button>
         </form>
       </div>
     </div>
