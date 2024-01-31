@@ -1,25 +1,17 @@
 import React from "react";
-
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
+import "./AllAdminFishs.css";
 
 function AllAdminFishs() {
   const allFishs = useLoaderData();
 
   return (
     <div>
-      <div className="all-img-carousel-galerie">
+      <div className="all-img-admin">
         {allFishs.map((fish) => (
-          <button
-            key={fish.id}
-            type="button"
-            className="button-carousel-galerie"
-          >
-            <img
-              src={fish.picture}
-              alt={fish.name}
-              className="img-carousel-galerie"
-            />
-          </button>
+          <Link key={fish.id} to={`/fish/${fish.id}`}>
+            <img className="img-admin" src={fish.picture} alt={fish.name} />
+          </Link>
         ))}
       </div>
     </div>

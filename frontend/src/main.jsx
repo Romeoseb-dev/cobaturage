@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 
-import OneFish from "./pages/OneFish";
+import OneFish from "./pages/Admin/OneFish";
 import AdminFishs from "./pages/Admin/AdminFishs";
 import Administration from "./pages/Admin/Administration";
 import Home from "./pages/Home";
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/galerie/:id",
+    path: "/fish/:id",
     element: <OneFish />,
     loader: async ({ params }) => {
       return connexion
