@@ -1,8 +1,5 @@
 .all-page-comment-add {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  background-color: aqua;
+  color: aliceblue;
 }
 .comment-avis {
   text-align: center;
@@ -16,8 +13,34 @@
   justify-content: center;
 }
 .comment-container {
-  border: 1px solid #ccc;
+  background-color: hsl(0, 0%, 3%);
+  border-radius: 15px;
   padding: 20px;
-  width: 30rem;
+  width: 35rem;
   margin: 1rem;
+}
+.name-rating {
+  margin-bottom: 1.5rem;
+}
+.comment-by-name {
+  background-color: #383a40;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 1rem;
+  height: 6rem;
+  word-wrap: break-word;
+}
+.button-com {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .comment-container {
+    width: 15rem;
+  }
+  .comment-by-name {
+    height: 8rem;
+  }
 }

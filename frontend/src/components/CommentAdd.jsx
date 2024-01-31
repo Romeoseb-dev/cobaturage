@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
 import { useLoaderData } from "react-router-dom";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
+
 import "./CommentAdd.css";
 
 function CommentAdd() {
@@ -34,43 +36,57 @@ function CommentAdd() {
   };
 
   return (
-    <div>
+    <div className="all-page-comment-add">
       <h1 className="comment-avis">
-        Avis{" "}
+        AVIS{" "}
         <StarRatings
           rating={averageRating}
           starRatedColor="gold"
           numberOfStars={5}
           name="averageRating"
           readOnly
+          starDimension="30px"
         />
       </h1>
       <div className="bloc-avis">
         {" "}
-        <button type="button" onClick={handlePrevComment}>
-          Previous
+        <button
+          className="button-com"
+          type="button"
+          onClick={handlePrevComment}
+          aria-label="Previous Comment"
+        >
+          <SlArrowLeft />
         </button>
         {allComments.length > 0 && (
           <div
             key={allComments[currentCommentIndex].id}
             className="comment-container"
           >
-            <h2>
+            <h2 className="name-rating">
               {allComments[currentCommentIndex].name} a donné :{" "}
               <StarRatings
                 rating={allComments[currentCommentIndex].rating}
                 starRatedColor="gold"
                 numberOfStars={5}
                 name="rating"
+                starDimension="30px"
               />
             </h2>
             <h2> Son commentaire : </h2>
-            <h3>{allComments[currentCommentIndex].avis}</h3>
+            <p className="comment-by-name">
+              {allComments[currentCommentIndex].avis}
+            </p>
           </div>
         )}
         {allComments.length > 1 && (
-          <button type="button" onClick={handleNextComment}>
-            Next
+          <button
+            className="button-com"
+            type="button"
+            onClick={handleNextComment}
+            aria-label="Next Comment"
+          >
+            <SlArrowRight />
           </button>
         )}
       </div>
