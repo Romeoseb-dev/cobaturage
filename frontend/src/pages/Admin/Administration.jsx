@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Administration.css";
+import Navbar from "../../components/Navbar";
 
 function Administration() {
   return (
     <div>
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/admin">Dashboard</Link>
-        <Link to="/admin/prises">Prises</Link>
+      <Navbar />
+      <nav className="all-page-admin">
+        <Link className="admin-prises" to="/admin/prises">
+          Prises
+        </Link>
       </nav>
     </div>
   );

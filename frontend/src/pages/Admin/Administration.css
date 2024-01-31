@@ -1,0 +1,10 @@
+.all-page-admin {
+  background-color: blueviolet;
+  height: 80vw;
+}
+.admin-prises {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
