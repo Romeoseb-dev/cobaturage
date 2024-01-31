@@ -36,16 +36,6 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/bateau",
-    element: <Bateau />,
-    loader: async () => {
-      return connexion
-        .get(`/fishs`)
-        .then((response) => response.data)
-        .catch((err) => console.error(err));
-    },
-  },
-  {
     path: "/galerie/:id",
     element: <OneFish />,
     loader: async ({ params }) => {

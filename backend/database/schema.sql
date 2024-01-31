@@ -4,11 +4,11 @@ CREATE TABLE methods (
     method VARCHAR(25) NOT NULL
 );
 
-INSERT INTO methods(method) VALUES ("à la traine");
-INSERT INTO methods(method) VALUES ("au leurre");
-INSERT INTO methods(method) VALUES ("à l'appat naturel");
-INSERT INTO methods(method) VALUES ("du bord");
-INSERT INTO methods(method) VALUES ("à la plongee");
+INSERT INTO methods(method) VALUES ('à la traine');
+INSERT INTO methods(method) VALUES ('au leurre');
+INSERT INTO methods(method) VALUES ('à l''appat naturel');
+INSERT INTO methods(method) VALUES ('du bord');
+INSERT INTO methods(method) VALUES ('à la plongee');
 
 CREATE TABLE fish (
     id INT AUTO_INCREMENT PRIMARY KEY,

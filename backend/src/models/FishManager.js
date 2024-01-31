@@ -17,9 +17,9 @@ class FishManager extends AbstractManager {
   async read(id) {
     const [rows] = await this.database.query(
       `SELECT fish.*, methods.method
-       FROM fish
-       INNER JOIN methods ON fish.methods_id = methods.id
-       WHERE fish.id = ?`,
+        FROM fish
+        INNER JOIN methods ON fish.methods_id = methods.id
+        WHERE fish.id = ?`,
       [id]
     );
 

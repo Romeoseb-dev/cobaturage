@@ -11,7 +11,7 @@ function CarouselGalerie() {
   };
 
   return (
-    <div>
+    <div className="all-page-galerie">
       {selectedFish && (
         <div className="selected-fish-container">
           <img
@@ -19,17 +19,32 @@ function CarouselGalerie() {
             alt={selectedFish.name}
             className="img-selected-fish"
           />
+          <div className="name-methode">
+            <h2>
+              {selectedFish.name} {selectedFish.weight}
+            </h2>
+            <h2>
+              pêché {selectedFish.methods_id} en {selectedFish.year}
+            </h2>
+          </div>
         </div>
       )}
-      {allFishs.map((fish) => (
-        <button key={fish.id} type="button" onClick={() => handleClick(fish)}>
-          <img
-            src={fish.picture}
-            alt={fish.name}
-            className="img-carousel-galerie"
-          />
-        </button>
-      ))}
+      <div className="all-img-carousel-galerie">
+        {allFishs.map((fish) => (
+          <button
+            key={fish.id}
+            type="button"
+            onClick={() => handleClick(fish)}
+            className="button-carousel-galerie"
+          >
+            <img
+              src={fish.picture}
+              alt={fish.name}
+              className="img-carousel-galerie"
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
