@@ -16,7 +16,7 @@ class FishManager extends AbstractManager {
 
   async read(id) {
     const [rows] = await this.database.query(
-      `SELECT fish.*, methods.method
+      `SELECT fish.*, methods.style
         FROM fish
         INNER JOIN methods ON fish.methods_id = methods.id
         WHERE fish.id = ?`,
@@ -35,8 +35,16 @@ class FishManager extends AbstractManager {
   async update(fish, id) {
     // Execute the SQL INSERT query to update the row with tie id on the "fish" table
     const result = await this.database.query(
-      `update ${this.table} set ? where id = ?`,
-      [fish, id]
+      `update ${this.table} set id = ?, name = ?, weight = ?, picture = ?, year = ?, methods_id = ? where id = ?`,
+      [
+        fish.id,
+        fish.name,
+        fish.weight,
+        fish.picture,
+        fish.year,
+        fish.methodsId,
+        id,
+      ]
     );
 
     return result;
