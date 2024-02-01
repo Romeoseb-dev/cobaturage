@@ -57,20 +57,38 @@
 .last {
   padding-bottom: 3rem;
 }
+.nav-img {
+  display: none;
+}
 @media screen and (min-width: 200px) and (max-width: 700px) {
+  .nav-img {
+    display: block;
+  }
   .fishing {
     margin-top: 1rem;
+    width: 90vw;
   }
   .title-fishing {
-    font-size: 1.5rem;
+    display: none;
   }
   .img-leurre {
-    height: 3rem;
-    margin: 1rem;
+    display: none;
   }
   .img-moule {
-    height: 3rem;
-    margin: 1rem;
+    display: none;
+  }
+  .description {
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  .style-fishing {
+    font-size: 1.5rem;
+  }
+  .li-list {
+    font-size: 1.2rem;
+  }
+  .title-style {
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 900px) {

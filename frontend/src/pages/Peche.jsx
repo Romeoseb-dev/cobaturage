@@ -2,13 +2,16 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import leurre from "../assets/leurre.png";
 import moule from "../assets/moule.png";
-
+import ImgFishing from "../components/ImgFishing";
 import "./Peche.css";
 
 function Peche() {
   return (
     <div>
       <Navbar />
+      <div className="nav-img">
+        <ImgFishing />
+      </div>
       <div className="all-page-fishing">
         <div className="page">
           <img className="img-leurre" src={leurre} alt="leurre" />
