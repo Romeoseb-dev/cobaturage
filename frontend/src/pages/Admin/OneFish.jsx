@@ -22,16 +22,25 @@ function OneFish() {
     }
   };
 
+  const editFish = () => {
+    navigate(`/admin/prises/modifier/${fish.id}`);
+  };
+
   return (
     <div>
       <ToastContainer />
-      <form onSubmit={deleteFish}>
+      <form>
         <h2>{fish.name}</h2>
         <h2>de {fish.weight}</h2>
         <h2>prit {fish.method}</h2>
         <h2>en {fish.year}</h2>
         <img className="img-one-fish" src={fish.picture} alt={fish.name} />
-        <button type="submit">Supprimer</button>
+        <button type="button" onClick={editFish}>
+          Modifier
+        </button>
+        <button type="submit" onClick={deleteFish}>
+          Supprimer
+        </button>
       </form>
     </div>
   );

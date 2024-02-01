@@ -13,6 +13,7 @@ import Peche from "./pages/Peche";
 import Bateau from "./pages/Bateau";
 import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
+import EditFishs from "./pages/Admin/EditFishs";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         .then((response) => response.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/admin/prises/modifier/:id",
+    element: <EditFishs />,
   },
   {
     path: "/peche-en-mer",
