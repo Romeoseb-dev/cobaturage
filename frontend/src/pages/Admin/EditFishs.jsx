@@ -11,7 +11,7 @@ const fishsType = {
   weight: "",
   picture: "",
   year: 0,
-  methods_id: null,
+  methodsId: null,
 };
 
 function EditFishs() {

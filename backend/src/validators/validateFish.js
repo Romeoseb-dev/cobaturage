@@ -7,7 +7,7 @@ const getFishSchema = () => {
     weight: Joi.string().max(10).required(),
     picture: Joi.string().uri().required(),
     year: Joi.number().integer().positive().required(),
-    methods_id: Joi.number().integer().positive().required(),
+    methodsId: Joi.number().integer().positive().required(),
   });
 };
 
