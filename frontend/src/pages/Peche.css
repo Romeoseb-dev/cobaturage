@@ -1,0 +1,123 @@
+.img-leurre {
+  height: 17rem;
+  position: fixed;
+  top: 7rem;
+  left: 0.2rem;
+}
+.img-moule {
+  height: 20rem;
+  position: fixed;
+  top: 15rem;
+  right: 0.5rem;
+}
+.all-page-fishing {
+  display: flex;
+  justify-content: center;
+}
+.page {
+  display: flex;
+  flex-direction: row;
+}
+.fishing {
+  width: 50vw;
+  text-align: center;
+  margin-top: 5rem;
+}
+.style-fishing {
+  margin-top: 2rem;
+  color: blue;
+  font-size: 2rem;
+}
+.title-fishing {
+  font-size: 3rem;
+}
+.li-list {
+  margin-top: 0.1rem;
+  color: black;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+.title-style {
+  font-style: italic;
+  text-decoration: underline;
+  color: blue;
+  font-size: 2.7rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.description {
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 1rem;
+}
+.last {
+  padding-bottom: 3rem;
+}
+.nav-img {
+  display: none;
+}
+@media screen and (min-width: 200px) and (max-width: 700px) {
+  .nav-img {
+    display: block;
+  }
+  .fishing {
+    margin-top: 1rem;
+    width: 90vw;
+  }
+  .title-fishing {
+    display: none;
+  }
+  .img-leurre {
+    display: none;
+  }
+  .img-moule {
+    display: none;
+  }
+  .description {
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  .style-fishing {
+    font-size: 1.5rem;
+  }
+  .li-list {
+    font-size: 1.2rem;
+  }
+  .title-style {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .img-leurre {
+    height: 7rem;
+  }
+  .img-moule {
+    height: 7rem;
+  }
+  .fishing {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .img-leurre {
+    height: 10rem;
+  }
+  .img-moule {
+    height: 10rem;
+  }
+  .fishing {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  .img-leurre {
+    height: 15rem;
+  }
+  .img-moule {
+    height: 15rem;
+  }
+}

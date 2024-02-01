@@ -1,14 +1,14 @@
 --
 CREATE TABLE methods (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    method VARCHAR(25) NOT NULL
+    style VARCHAR(25) NOT NULL
 );
 
-INSERT INTO methods(method) VALUES ('à la traine');
-INSERT INTO methods(method) VALUES ('au leurre');
-INSERT INTO methods(method) VALUES ('à l''appat naturel');
-INSERT INTO methods(method) VALUES ('du bord');
-INSERT INTO methods(method) VALUES ('à la plongee');
+INSERT INTO methods(style) VALUES ('à la traine');
+INSERT INTO methods(style) VALUES ('au leurre');
+INSERT INTO methods(style) VALUES ("à l'appat naturel");
+INSERT INTO methods(style) VALUES ('du bord');
+INSERT INTO methods(style) VALUES ('à la plongee');
 
 CREATE TABLE fish (
     id INT AUTO_INCREMENT PRIMARY KEY,

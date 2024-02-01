@@ -39,7 +39,6 @@ const add = async (req, res, next) => {
 const edit = async (req, res, next) => {
   // Extract the comment data from the request body
   const fish = req.body;
-
   try {
     // Insert the comment into the database
     await tables.fish.update(fish, req.params.id);

@@ -37,7 +37,7 @@ router.post("/items", itemControllers.add);
 router.post("/fishs", fishControllers.add);
 router.post("/contact", ContactControllers.send);
 
-router.put("/fishs/:id", validateFish, commentControllers.edit);
+router.put("/fishs/:id", validateFish, fishControllers.edit);
 router.delete("/fishs/:id", fishControllers.destroy);
 
 /* ************************************************************************* */

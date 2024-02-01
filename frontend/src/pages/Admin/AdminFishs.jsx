@@ -114,7 +114,7 @@ function AdminFishs() {
               <option value={null}>votre choix</option>
               {methods.map((method) => (
                 <option key={method.id} value={method.id}>
-                  {method.method}
+                  {method.style}
                 </option>
               ))}
             </select>

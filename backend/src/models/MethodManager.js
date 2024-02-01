@@ -7,8 +7,8 @@ class MethodManager extends AbstractManager {
 
   async create(method) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (method) values (?)`,
-      [method.method]
+      `insert into ${this.table} (style) values (?)`,
+      [method.name]
     );
 
     return result.insertId;

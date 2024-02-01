@@ -32,7 +32,7 @@ function OneFish() {
       <form>
         <h2>{fish.name}</h2>
         <h2>de {fish.weight}</h2>
-        <h2>prit {fish.method}</h2>
+        <h2>prit {fish.style}</h2>
         <h2>en {fish.year}</h2>
         <img className="img-one-fish" src={fish.picture} alt={fish.name} />
         <button type="button" onClick={editFish}>

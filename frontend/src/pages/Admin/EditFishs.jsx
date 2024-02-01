@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { useParams } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../components/Navbar";
@@ -13,6 +15,7 @@ const fishsType = {
 };
 
 function EditFishs() {
+  const { id } = useParams();
   const [fishs, setFishs] = useState(fishsType);
   const [methods, setMethods] = useState([]);
   const getMethods = async () => {
@@ -23,9 +26,20 @@ function EditFishs() {
       console.error(error);
     }
   };
+  const getFish = async () => {
+    try {
+      const oneFish = await connexion
+        .get(`/fishs/${id}`)
+        .then((res) => res.data);
+      setFishs(oneFish);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     getMethods();
+    getFish();
   }, []);
 
   const handleFishs = (event) => {
@@ -35,7 +49,7 @@ function EditFishs() {
     }));
   };
 
-  const postFishs = async (event) => {
+  const updateFishs = async (event) => {
     event.preventDefault();
 
     try {
@@ -43,7 +57,15 @@ function EditFishs() {
         toast.error("L'ID du poisson est manquant !");
         return;
       }
-      await connexion.put(`/fishs/${fishs.id}`, fishs);
+      const body = {
+        id: fishs.id,
+        name: fishs.name,
+        weight: fishs.weight,
+        picture: fishs.picture,
+        year: fishs.year,
+        methodsId: fishs.methods_id,
+      };
+      await connexion.put(`/fishs/${fishs.id}`, body);
       toast.success("Prise modifiée!");
     } catch (error) {
       console.error("Erreur lors de la modification de la prise :", error);
@@ -58,7 +80,7 @@ function EditFishs() {
       <div className="all-page-admin-fish">
         <h2>Administration d'une prise:</h2>
         <ToastContainer />
-        <form onSubmit={postFishs} className="form-admin">
+        <form onSubmit={updateFishs} className="form-admin">
           Ajout d'un(e)
           <label>
             name
@@ -115,7 +137,7 @@ function EditFishs() {
               <option value={null}>votre choix</option>
               {methods.map((method) => (
                 <option key={method.id} value={method.id}>
-                  {method.method}
+                  {method.style}
                 </option>
               ))}
             </select>

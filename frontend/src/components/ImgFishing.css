@@ -1,0 +1,17 @@
+.container-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.nav-leurre {
+  width: 3rem;
+}
+.nav-moule {
+  width: 3rem;
+}
+.nav-title-fishing {
+  font-size: 1.8rem;
+  width: 70%;
+  text-align: center;
+}
