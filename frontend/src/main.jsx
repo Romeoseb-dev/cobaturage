@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 
-import OneFish from "./pages/OneFish";
+import OneFish from "./pages/Admin/OneFish";
 import AdminFishs from "./pages/Admin/AdminFishs";
 import Administration from "./pages/Admin/Administration";
 import Home from "./pages/Home";
@@ -13,6 +13,7 @@ import Peche from "./pages/Peche";
 import Bateau from "./pages/Bateau";
 import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
+import EditFishs from "./pages/Admin/EditFishs";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/galerie/:id",
+    path: "/fish/:id",
     element: <OneFish />,
     loader: async ({ params }) => {
       return connexion
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         .then((response) => response.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/admin/prises/modifier/:id",
+    element: <EditFishs />,
   },
   {
     path: "/peche-en-mer",
@@ -74,6 +79,16 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Administration />,
+  },
+  {
+    path: "/admin/prises",
+    element: <AdminFishs />,
+    loader: async () => {
+      return connexion
+        .get(`/fishs`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
+    },
   },
   {
     path: "/admin/prises",

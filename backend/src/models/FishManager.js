@@ -31,6 +31,25 @@ class FishManager extends AbstractManager {
 
     return rows;
   }
+
+  async update(fish, id) {
+    // Execute the SQL INSERT query to update the row with tie id on the "fish" table
+    const result = await this.database.query(
+      `update ${this.table} set ? where id = ?`,
+      [fish, id]
+    );
+
+    return result;
+  }
+
+  async delete(id) {
+    const result = await this.database.query(
+      `delete from ${this.table} where id = ?`,
+      [id]
+    );
+
+    return result;
+  }
 }
 
 module.exports = FishManager;

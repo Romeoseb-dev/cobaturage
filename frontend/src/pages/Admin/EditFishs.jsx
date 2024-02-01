@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../components/Navbar";
-import AllAdminFishs from "./AllAdminFishs";
 import connexion from "../../services/connexion";
-
-import "./AdminFishs.css";
 
 const fishsType = {
   name: "",
@@ -15,10 +12,9 @@ const fishsType = {
   methods_id: null,
 };
 
-function AdminFishs() {
+function EditFishs() {
   const [fishs, setFishs] = useState(fishsType);
   const [methods, setMethods] = useState([]);
-
   const getMethods = async () => {
     try {
       const myMethods = await connexion.get("/methods").then((res) => res.data);
@@ -33,8 +29,8 @@ function AdminFishs() {
   }, []);
 
   const handleFishs = (event) => {
-    setFishs((previouState) => ({
-      ...previouState,
+    setFishs((etatPrecedent) => ({
+      ...etatPrecedent,
       [event.target.name]: event.target.value,
     }));
   };
@@ -43,19 +39,24 @@ function AdminFishs() {
     event.preventDefault();
 
     try {
-      await connexion.post("/fishs", fishs);
-      toast.success("Prise ajouté!");
+      if (!fishs.id) {
+        toast.error("L'ID du poisson est manquant !");
+        return;
+      }
+      await connexion.put(`/fishs/${fishs.id}`, fishs);
+      toast.success("Prise modifiée!");
     } catch (error) {
-      toast.error("Erreur, Non ajouté!");
+      console.error("Erreur lors de la modification de la prise :", error);
+      toast.error("Erreur, Non modifiée!");
     }
   };
+
   return (
     <div>
       <Navbar />
 
       <div className="all-page-admin-fish">
         <h2>Administration d'une prise:</h2>
-        <AllAdminFishs />
         <ToastContainer />
         <form onSubmit={postFishs} className="form-admin">
           Ajout d'un(e)
@@ -119,11 +120,11 @@ function AdminFishs() {
               ))}
             </select>
           </label>
-          <button type="submit">Ajouter</button>
+          <button type="submit">modifier</button>
         </form>
       </div>
     </div>
   );
 }
 
-export default AdminFishs;
+export default EditFishs;

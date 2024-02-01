@@ -1,0 +1,9 @@
+.all-img-admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+.img-admin {
+  width: 9vw;
+}
