@@ -1,0 +1,41 @@
+.all-page-boat {
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-boat {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: blue;
+}
+.descri-boat {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 30rem;
+  font-size: 1.2rem;
+}
+.img-descri-boat {
+  width: 30rem;
+  border-radius: 20px;
+  margin: 1rem 0 3rem 0;
+}
+.bold {
+  font-weight: bold;
+}
+@media (max-width: 550px) {
+  .title-boat {
+    font-size: 1.7rem;
+  }
+  .descri-boat {
+    width: 80%;
+  }
+  .img-descri-boat {
+    width: 85%;
+  }
+}

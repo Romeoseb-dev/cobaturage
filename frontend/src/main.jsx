@@ -10,7 +10,7 @@ import Administration from "./pages/Admin/Administration";
 import Home from "./pages/Home";
 import Fishs from "./pages/Fishs";
 import Peche from "./pages/Peche";
-import Bateau from "./pages/Bateau";
+import Boat from "./pages/Boat";
 import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bateau",
-    element: <Bateau />,
+    element: <Boat />,
   },
   {
     path: "/avis",
