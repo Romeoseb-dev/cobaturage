@@ -63,10 +63,10 @@ function Boat() {
           <p>
             Avec son système d'ancrage électronique, le Terrova maintient votre
             position de manière fiable, offrant une stabilité remarquable pour
-            vous concentrer pleinement sur votre pêche. Son design robuste et
-            résistant à l'eau de mer assure une durabilité exceptionnelle,
-            faisant du Minn Kota le choix privilégié des pêcheurs en quête de
-            performance sur les eaux salées.
+            vous concentrer sur votre pêche. Son design robuste et résistant à
+            l'eau de mer assure une durabilité exceptionnelle, faisant du Minn
+            Kota le choix privilégié des pêcheurs en quête de performance sur
+            les eaux salées.
           </p>
         </div>
         <div className="descri-boat">

@@ -11,6 +11,7 @@ function Home() {
   return (
     <div className="all-page">
       <Navbar />
+      <h1 className="title-home">Embarquez avec moi en coBOATurage !</h1>
 
       <Carousel />
       <ImgScrool />

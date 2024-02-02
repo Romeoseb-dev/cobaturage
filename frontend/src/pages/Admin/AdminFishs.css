@@ -17,11 +17,22 @@
 }
 .input-admin {
   padding: 1rem;
-  margin: 0.5rem 0 3rem 0;
+  margin: 0.5rem 0 3rem 1rem;
   color: aliceblue;
   outline: none;
   background-color: #383a40;
   height: 1.2rem;
+  width: 18rem;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.2rem;
+}
+.input-admin-method {
+  margin: 0.5rem 0 3rem 1rem;
+  color: aliceblue;
+  outline: none;
+  background-color: #383a40;
+  height: 3.2rem;
   width: 18rem;
   border-radius: 15px;
   border: none;
