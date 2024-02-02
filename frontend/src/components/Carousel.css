@@ -6,7 +6,7 @@
 }
 
 .carousel-image {
-  width: 50rem;
+  width: 40rem;
   height: auto;
   border: solid;
   border-color: rgb(8, 8, 8);
@@ -16,6 +16,7 @@
   transition: opacity 1.9s ease-in-out;
 }
 .coboaturage {
+  display: none;
   position: absolute;
   color: aliceblue;
   font-size: 5rem;

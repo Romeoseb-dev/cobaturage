@@ -48,7 +48,7 @@ function Contact() {
             <div className="container-name">
               <div className="name">
                 <InputContact
-                  label="nom :"
+                  label="Nom :"
                   name="name"
                   type="text"
                   onChange={handleChange}
@@ -57,7 +57,7 @@ function Contact() {
               </div>
               <div className="surname">
                 <InputContact
-                  label="prénom :"
+                  label="Prénom :"
                   name="surname"
                   type="text"
                   onChange={handleChange}
@@ -68,7 +68,7 @@ function Contact() {
             <div className="container-email">
               <div className="email">
                 <InputContact
-                  label="email :"
+                  label="Mail :"
                   name="email"
                   type="text"
                   onChange={handleChange}
@@ -77,7 +77,7 @@ function Contact() {
               </div>
               <div className="number">
                 <InputContact
-                  label="numéro :"
+                  label="Téléphone :"
                   name="number"
                   type="text"
                   onChange={handleChange}
@@ -86,7 +86,7 @@ function Contact() {
               </div>
             </div>
             <label className="container-textera">
-              <span className="label-text-form-contact">message :</span>
+              <span className="label-text-form-contact">Message :</span>
               <textarea
                 className="textarea-form-contact"
                 name="message"

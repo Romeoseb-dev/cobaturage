@@ -10,6 +10,7 @@
   height: 50%;
 }
 .boat {
+  display: none;
   position: absolute;
   width: 18%;
   margin-top: 26rem;

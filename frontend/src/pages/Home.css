@@ -1,15 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 .all-page {
-  background-color: rgb(22, 129, 179);
   background-size: cover;
   background-position: center;
 
   display: flex;
   flex-direction: column;
 }
+.title-home {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2.5rem;
+}
 .container-carous-wave {
   position: relative;
+}
+@media (max-width: 900px) {
+  .title-home {
+    font-size: 1.5rem;
+  }
 }

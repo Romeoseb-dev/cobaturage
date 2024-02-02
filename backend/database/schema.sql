@@ -19,7 +19,7 @@ CREATE TABLE fish (
     methods_id INT,
     FOREIGN KEY (methods_id) REFERENCES methods(id)
 );
-
+INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("loup","6kg","https://www.sunlocation.com/blog/wp-content/uploads/2018/04/cala-cullaro-costa-brava.jpg",2023,1);
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("loup","6kg","https://photoseb.netlify.app/assets/loup5kg-1cc4a778.jpg",2023,1);
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("seriole","15kg","https://photoseb.netlify.app/assets/seriole16kg-8294364e.jpg",2023,1);
 INSERT INTO fish(name,weight,picture,year,methods_id) VALUES ("denti","6kg","https://photoseb.netlify.app/assets/denti6kg-850245da.jpg",2023,1);

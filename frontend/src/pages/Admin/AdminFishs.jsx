@@ -60,7 +60,7 @@ function AdminFishs() {
         <form onSubmit={postFishs} className="form-admin">
           Ajout d'un(e)
           <label>
-            name
+            Name:
             <input
               className="input-admin"
               type="text"
@@ -71,7 +71,7 @@ function AdminFishs() {
             />
           </label>
           <label>
-            weight
+            Weight:
             <input
               className="input-admin"
               type="text"
@@ -82,7 +82,7 @@ function AdminFishs() {
             />
           </label>
           <label>
-            picture
+            Picture:
             <input
               className="input-admin"
               type="text"
@@ -93,7 +93,7 @@ function AdminFishs() {
             />
           </label>
           <label>
-            year
+            Year:
             <input
               className="input-admin"
               type="number"
@@ -104,12 +104,12 @@ function AdminFishs() {
             />
           </label>
           <label>
-            methods_id
+            Methods_id:
             <select
               name="methods_id"
               onChange={handleFishs}
               required
-              className="input-admin"
+              className="input-admin-method"
             >
               <option value={null}>votre choix</option>
               {methods.map((method) => (
@@ -119,7 +119,9 @@ function AdminFishs() {
               ))}
             </select>
           </label>
-          <button type="submit">Ajouter</button>
+          <button className="form-contact-submit" type="submit">
+            Ajouter
+          </button>
         </form>
       </div>
     </div>
