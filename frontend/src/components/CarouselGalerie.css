@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 15rem;
+  background: url("../assets/fd1.png") center/cover fixed;
 }
 .img-selected-fish {
   width: 50vw;

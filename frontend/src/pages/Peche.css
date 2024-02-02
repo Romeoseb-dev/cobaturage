@@ -13,6 +13,7 @@
 .all-page-fishing {
   display: flex;
   justify-content: center;
+  background: url("../assets/fd1.png") center/cover fixed;
 }
 .page {
   display: flex;

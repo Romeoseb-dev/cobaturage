@@ -4,9 +4,8 @@
   font-family: "Quicksand", sans-serif;
 }
 .all-page {
-  background-size: cover;
-  background-position: center;
-
+  height: 100vh;
+  background: url("../assets/fd1.png") center/cover fixed;
   display: flex;
   flex-direction: column;
 }

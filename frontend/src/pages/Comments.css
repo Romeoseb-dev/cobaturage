@@ -1,5 +1,6 @@
 .all-page-comments {
   padding-bottom: 7rem;
+  background: url("../assets/fd1.png") center/cover fixed;
 }
 .add-comment {
   font-size: 2rem;
