@@ -4,6 +4,7 @@ const router = express.Router();
 
 const commentControllers = require("./controllers/commentControllers");
 const validateComment = require("./validators/validateComment");
+const validateContact = require("./validators/validateContact");
 
 router.get("/comments", commentControllers.browse);
 router.get("/comments/:id", commentControllers.read);
@@ -35,7 +36,7 @@ router.get("/methods/:id", methodControllers.read);
 // Route to add a new item
 router.post("/items", itemControllers.add);
 router.post("/fishs", fishControllers.add);
-router.post("/contact", ContactControllers.send);
+router.post("/contact", validateContact, ContactControllers.send);
 
 router.put("/fishs/:id", validateFish, fishControllers.edit);
 router.delete("/fishs/:id", fishControllers.destroy);
