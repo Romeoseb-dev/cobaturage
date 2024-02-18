@@ -2,6 +2,24 @@ const express = require("express");
 
 const router = express.Router();
 
+const adminControllers = require("./controllers/adminControllers");
+const validateAdmin = require("./validators/validateAdmin");
+
+router.get("/admins", adminControllers.browse);
+router.get("/admins/:id", adminControllers.read);
+router.post("/admins", validateAdmin, adminControllers.add);
+// router.put("/admins/:id", validateAdmin, adminControllers.edit);
+// router.delete("/admins/:id", adminControllers.destroy);
+
+const userControllers = require("./controllers/userControllers");
+const validateUser = require("./validators/validateUser");
+
+router.get("/users", userControllers.browse);
+router.get("/users/:id", userControllers.read);
+router.post("/users", validateUser, userControllers.add);
+// router.put("/users/:id", validateUser, userControllers.edit);
+// router.delete("/users/:id", userControllers.destroy);
+
 const commentControllers = require("./controllers/commentControllers");
 const validateComment = require("./validators/validateComment");
 const validateContact = require("./validators/validateContact");

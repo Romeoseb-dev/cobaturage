@@ -44,3 +44,17 @@ create table comment (
   rating INT NOT NULL
 );
 
+
+create table user (
+  id int unsigned primary key auto_increment not null,
+  mail VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+
+create table admin (
+  id int unsigned primary key auto_increment not null,
+  mail VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
