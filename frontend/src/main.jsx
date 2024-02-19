@@ -14,6 +14,7 @@ import Boat from "./pages/Boat";
 import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
+import Reservation from "./pages/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/bateau",
     element: <Boat />,
+  },
+  {
+    path: "/réservation",
+    element: <Reservation />,
   },
   {
     path: "/avis",
