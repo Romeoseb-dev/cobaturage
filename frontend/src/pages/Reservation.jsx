@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import Navbar from "../components/Navbar";
+import { AuthContext } from "../contexts/Auth";
 import connexion from "../services/connexion";
 import "./Reservation.css";
 
-const user = {
+const initialUserState = {
   mail: "",
   password: "",
 };
 
 function Reservation() {
-  const [identification, setIdentification] = useState(user);
-
+  const [identification, setIdentification] = useState(initialUserState);
+  const { setConnected } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleIdentification = (event) => {
     setIdentification((prev) => ({
       ...prev,
@@ -21,10 +24,37 @@ function Reservation() {
   const handleRequest = async (event) => {
     event.preventDefault();
     try {
-      await connexion.post("/admins", identification);
-      toast.success("vous êtes connecté !");
+      const { data: adminData } = await connexion.get("/admins");
+      const { data: userData } = await connexion.get("/users");
+
+      const adminMatch = adminData.find(
+        (admin) =>
+          admin.mail === identification.mail &&
+          admin.password === identification.password
+      );
+
+      const userMatch = userData.find(
+        (user) =>
+          user.mail === identification.mail &&
+          user.password === identification.password
+      );
+
+      if (adminMatch) {
+        setConnected("admin"); // Définir la valeur à "admin"
+        setTimeout(() => {
+          navigate("/admin");
+        }, 1000);
+        toast.success("vous êtes connecté en tant qu'administrateur");
+      } else if (userMatch) {
+        toast.success("vous êtes connecté en tant qu'utilisateur");
+        // Peut-être définir un contexte utilisateur ici si nécessaire
+      } else {
+        toast.error("Adresse email ou mot de passe incorrect !");
+        setIdentification(initialUserState);
+      }
     } catch (error) {
       toast.error("Erreur lors de la connexion !");
+      setIdentification(initialUserState);
     }
   };
 
