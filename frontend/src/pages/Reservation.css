@@ -20,3 +20,13 @@
 .input-pass-reserve {
   width: 30rem;
 }
+.sub-inscr {
+  background-color: #0bea0f;
+  outline: none;
+  border: none;
+  color: aliceblue;
+  margin-top: 1rem;
+  width: 7rem;
+  height: 1.5rem;
+  border-radius: 10px;
+}

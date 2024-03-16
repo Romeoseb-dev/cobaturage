@@ -16,6 +16,9 @@ function Administration() {
         <Link className="admin-prises" to="/admin/prises">
           Prises
         </Link>
+        <Link className="admin-comment" to="/admin/commentaires">
+          Commentaires
+        </Link>
       </nav>
     </div>
   );
