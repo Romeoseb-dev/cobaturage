@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
 import Reservation from "./pages/Reservation";
 import Signup from "./pages/Admin/Signup";
+import AdminComment from "./pages/Admin/AdminComment";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
   {
     path: "/avis",
     element: <Comments />,
+  },
+  {
+    path: "/admin/commentaires",
+    element: <AdminComment />,
   },
   {
     path: "/contact",
