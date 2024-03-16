@@ -1,0 +1,22 @@
+.title-reserve {
+  font-size: 2.3rem;
+  color: blue;
+  margin: 2rem;
+  text-align: center;
+}
+.form-reserve {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  margin: auto;
+  font-size: 2rem;
+}
+.mail-reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.input-mail-reserve,
+.input-pass-reserve {
+  width: 30rem;
+}

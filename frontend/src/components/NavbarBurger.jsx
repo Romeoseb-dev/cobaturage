@@ -35,6 +35,7 @@ function NavbarBurger() {
           <Link to="/peche-en-mer">Peche en mer</Link>
           <Link to="/bateau">Le bateau</Link>
           <Link to="/galerie">Galerie</Link>
+          <Link to="/réservation">Réservation</Link>
           <Link to="/avis">Avis</Link>
           <Link to="/contact">Contact</Link>
         </div>

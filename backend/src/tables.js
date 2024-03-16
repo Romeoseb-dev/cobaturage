@@ -8,7 +8,13 @@ const ItemManager = require("./models/ItemManager");
 const MethodManager = require("./models/MethodManager");
 const CommentManager = require("./models/CommentManager");
 
+const UserManager = require("./models/UserManager");
+
+const AdminManager = require("./models/AdminManager");
+
 const managers = [
+  AdminManager,
+  UserManager,
   CommentManager,
   ItemManager,
   FishManager,

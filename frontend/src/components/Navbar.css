@@ -28,6 +28,9 @@ a {
   text-decoration: none;
   color: aliceblue;
 }
+.contact-mail {
+  font-size: 25px;
+}
 .phone {
   color: aliceblue;
   margin-right: 1rem;
@@ -52,5 +55,8 @@ a {
   }
   .navbar-burger {
     display: flex;
+  }
+  .contact-mail {
+    display: none;
   }
 }

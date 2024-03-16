@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
+import { AuthProvider } from "./contexts/Auth";
 
 import OneFish from "./pages/Admin/OneFish";
 import AdminFishs from "./pages/Admin/AdminFishs";
@@ -14,6 +15,7 @@ import Boat from "./pages/Boat";
 import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
+import Reservation from "./pages/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +71,10 @@ const router = createBrowserRouter([
     element: <Boat />,
   },
   {
+    path: "/réservation",
+    element: <Reservation />,
+  },
+  {
     path: "/avis",
     element: <Comments />,
   },
@@ -100,6 +106,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

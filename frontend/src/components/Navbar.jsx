@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { FiMail } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
 import insta from "../assets/insta.svg";
 import "./Navbar.css";
@@ -35,13 +35,19 @@ function Navbar() {
           <Link to="/galerie">GALERIE</Link>
         </li>
         <li>
-          <Link to="/avis">AVIS</Link>
+          <Link to="/réservation">RÉSERVATION</Link>
         </li>
         <li>
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/avis">AVIS</Link>
         </li>
       </ul>
+
       <ul className="list-contact">
+        <li>
+          <Link to="/contact">
+            <FiMail className="contact-mail" />
+          </Link>
+        </li>
         <a
           className="number-phone"
           href="tel:06.25.16.81.28"
