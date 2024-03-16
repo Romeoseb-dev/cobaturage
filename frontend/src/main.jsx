@@ -16,6 +16,7 @@ import Comments from "./pages/Comments";
 import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
 import Reservation from "./pages/Reservation";
+import Signup from "./pages/Admin/Signup";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Administration />,
+  },
+  {
+    path: "/inscription",
+    element: <Signup />,
   },
   {
     path: "/admin/prises",

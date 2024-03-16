@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import Navbar from "../components/Navbar";
@@ -88,6 +89,11 @@ function Reservation() {
         <button className="sub-com" type="submit">
           Se connecter
         </button>
+        <Link to="/inscription">
+          <button className="sub-inscr" type="button">
+            S'inscrire
+          </button>
+        </Link>
       </form>
     </div>
   );
