@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import EditFishs from "./pages/Admin/EditFishs";
 import Reservation from "./pages/Reservation";
 import Signup from "./pages/Admin/Signup";
+import AdminComment from "./pages/Admin/AdminComment";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,16 @@ const router = createBrowserRouter([
   {
     path: "/avis",
     element: <Comments />,
+    loader: async () => {
+      return connexion
+        .get(`/comments`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
+    },
+  },
+  {
+    path: "/admin/commentaires",
+    element: <AdminComment />,
     loader: async () => {
       return connexion
         .get(`/comments`)
@@ -100,10 +111,6 @@ const router = createBrowserRouter([
         .then((response) => response.data)
         .catch((err) => console.error(err));
     },
-  },
-  {
-    path: "/admin/prises",
-    element: <AdminFishs />,
   },
 ]);
 
