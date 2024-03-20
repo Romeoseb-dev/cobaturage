@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Navigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../contexts/Auth";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../components/Navbar";
 import AllAdminFishs from "./AllAdminFishs";
@@ -16,6 +18,11 @@ const fishsType = {
 };
 
 function AdminFishs() {
+  const { connected } = useContext(AuthContext);
+  if (connected !== "admin") {
+    return <Navigate to="/" replace />;
+  }
+
   const [fishs, setFishs] = useState(fishsType);
   const [methods, setMethods] = useState([]);
 

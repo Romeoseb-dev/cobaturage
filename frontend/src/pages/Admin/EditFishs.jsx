@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
+import { Navigate } from "react-router-dom";
 import { useParams } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../contexts/Auth";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../components/Navbar";
 import connexion from "../../services/connexion";
@@ -15,6 +17,11 @@ const fishsType = {
 };
 
 function EditFishs() {
+  const { connected } = useContext(AuthContext);
+  if (connected !== "admin") {
+    return <Navigate to="/" replace />;
+  }
+
   const { id } = useParams();
   const [fishs, setFishs] = useState(fishsType);
   const [methods, setMethods] = useState([]);

@@ -51,6 +51,16 @@ const router = createBrowserRouter([
     },
   },
   {
+    path: "/admin/commentaires",
+    element: <AdminComment />,
+    loader: async () => {
+      return connexion
+        .get(`/comments`)
+        .then((response) => response.data)
+        .catch((err) => console.error(err));
+    },
+  },
+  {
     path: "/fish/:id",
     element: <OneFish />,
     loader: async ({ params }) => {
@@ -81,10 +91,6 @@ const router = createBrowserRouter([
     element: <Comments />,
   },
   {
-    path: "/admin/commentaires",
-    element: <AdminComment />,
-  },
-  {
     path: "/contact",
     element: <Contact />,
   },
@@ -105,10 +111,6 @@ const router = createBrowserRouter([
         .then((response) => response.data)
         .catch((err) => console.error(err));
     },
-  },
-  {
-    path: "/admin/prises",
-    element: <AdminFishs />,
   },
 ]);
 

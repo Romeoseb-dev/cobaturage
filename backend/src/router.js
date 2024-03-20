@@ -27,8 +27,8 @@ const validateContact = require("./validators/validateContact");
 router.get("/comments", commentControllers.browse);
 router.get("/comments/:id", commentControllers.read);
 router.post("/comments", validateComment, commentControllers.add);
-// router.put("/comments/:id", validateComment, commentControllers.edit);
-// router.delete("/comments/:id", commentControllers.destroy);
+router.put("/comments/:id", validateComment, commentControllers.edit);
+router.delete("/comments/:id", commentControllers.destroy);
 
 /* ************************************************************************* */
 // Define Your API Routes Here

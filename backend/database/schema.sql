@@ -43,7 +43,8 @@ create table comment (
   avis VARCHAR(255) NOT NULL,
   rating INT NOT NULL
 );
-
+INSERT INTO comment(mail, name, avis, rating) VALUES ("paul@gmail.com","Paul","super sortie en bateau, à refaire !!", "5");
+INSERT INTO comment(mail, name, avis, rating) VALUES ("tom@gmail.com","Tom","le site est super, bon dévellopeur !!", "5");
 
 create table user (
   id int unsigned primary key auto_increment not null,
@@ -60,35 +61,3 @@ create table admin (
 
 INSERT INTO admin(mail, password) VALUES ("romeo.sebastien@gmail.com","444777");
 
-CREATE TABLE Admin (
-  admin_id INT PRIMARY KEY,
-  username VARCHAR(255),
-  password VARCHAR(255)
-);
-
-CREATE TABLE Sortie (
-  sortie_id INT PRIMARY KEY,
-  location VARCHAR(255),
-  date DATE,
-  departure_time TIME,
-  arrival_time TIME,
-  available_seats INT,
-  admin_id INT,
-  FOREIGN KEY (admin_id) REFERENCES Admin(admin_id)
-);
-
-CREATE TABLE Client (
-  client_id INT PRIMARY KEY,
-  last_name VARCHAR(255),
-  first_name VARCHAR(255),
-  email VARCHAR(255)
-);
-
-CREATE TABLE Reservation (
-  reservation_id INT PRIMARY KEY,
-  sortie_id INT,
-  client_id INT,
-  reserved_seats INT,
-  FOREIGN KEY (sortie_id) REFERENCES Sortie(sortie_id),
-  FOREIGN KEY (client_id) REFERENCES Client(client_id)
-);
